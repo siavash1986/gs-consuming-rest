@@ -14,73 +14,12 @@ RESTful web service.
 You will build an application that uses Spring's `RestTemplate` to retrieve a random
 Spring Boot quotation at https://gturnquist-quoters.cfapps.io/api/random.
 
-== What You Need
-
-:java_version: 1.8
-include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/master/prereq_editor_jdk_buildtools.adoc[]
-
-include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/master/how_to_complete_this_guide.adoc[]
-
 [[scratch]]
-== Starting with Spring Initializr
+== Start by checking out the lab code
 
-For all Spring applications, you can start with the https://start.spring.io[Spring
-Initializr]. The Initializr offers a fast way to pull in all the dependencies you need for
-an application and does a lot of the set up for you. Because this example needs to be
-nothing more than a web application, you need to include only the Web dependency.
+Check out https://github.com/siavash1986/gs-consuming-rest[gs-consuming-rest] repository to your local development environment and open initial folder
 
-The following listing shows the `pom.xml` file created when you choose Maven:
-
-====
-[src,xml]
-----
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.1.7.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
-	</parent>
-	<groupId>com.example</groupId>
-	<artifactId>consuming-rest</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>consuming-rest</name>
-	<description>Demo project for Spring Boot</description>
-
-	<properties>
-		<java.version>1.8</java.version>
-	</properties>
-
-	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-	</dependencies>
-
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
-
-</project>
-----
-====
-
-The following listing shows the `build.gradle` file created when you choose Gradle:
+The following listing shows the `build.gradle` file located in the initial folder:
 
 ====
 [src,gradle]
@@ -208,8 +147,6 @@ include::complete/src/main/java/com/example/consumingrest/ConsumingRestApplicati
 
 == Running the Application
 
-include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/master/build_an_executable_jar_with_both.adoc[]
-
 You should see output similar to the following but with a random quotation:
 
 ....
@@ -225,24 +162,3 @@ for your environment.
 
 == Summary
 Congratulations! You have just developed a simple REST client by using Spring Boot.
-
-== See Also
-
-The following guides may also be helpful:
-
-* https://spring.io/guides/gs/rest-service/[Building a RESTful Web Service]
-* https://spring.io/guides/gs/consuming-rest-angularjs/[Consuming a RESTful Web Service with AngularJS]
-* https://spring.io/guides/gs/consuming-rest-jquery/[Consuming a RESTful Web Service with jQuery]
-* https://spring.io/guides/gs/consuming-rest-restjs/[Consuming a RESTful Web Service with rest.js]
-* https://spring.io/guides/gs/accessing-gemfire-data-rest/[Accessing GemFire Data with REST]
-* https://spring.io/guides/gs/accessing-mongodb-data-rest/[Accessing MongoDB Data with REST]
-* https://spring.io/guides/gs/accessing-data-mysql/[Accessing data with MySQL]
-* https://spring.io/guides/gs/accessing-data-rest/[Accessing JPA Data with REST]
-* https://spring.io/guides/gs/accessing-neo4j-data-rest/[Accessing Neo4j Data with REST]
-* https://spring.io/guides/gs/securing-web/[Securing a Web Application]
-* https://spring.io/guides/gs/spring-boot/[Building an Application with Spring Boot]
-* https://spring.io/guides/gs/testing-restdocs/[Creating API Documentation with Restdocs]
-* https://spring.io/guides/gs/rest-service-cors/[Enabling Cross Origin Requests for a RESTful Web Service]
-* https://spring.io/guides/gs/rest-hateoas/[Building a Hypermedia-Driven RESTful Web Service]
-
-include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/master/footer.adoc[]
